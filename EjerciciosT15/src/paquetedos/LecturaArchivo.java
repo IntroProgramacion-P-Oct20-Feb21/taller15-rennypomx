@@ -20,7 +20,7 @@ public class LecturaArchivo {
     // lee registro del archivo
     public static void leerRegistros() {
 
-        int suma = 0;
+     int suma = 0;
         String numeroEstablecimientos;
         int numeroEstablecimientosEntero;
         // 1. Se abre el archivo
@@ -44,9 +44,10 @@ public class LecturaArchivo {
                 // Java ofrece el proceso Integer.parseInt
                 // para transformar un valor de tipo String a Entero
                 numeroEstablecimientosEntero = Integer.parseInt(numeroEstablecimientos);
+                
                 // agregar código aquí
-                
-                
+                // System.out.printf("%d\n", numeroEstablecimientosEntero);
+                suma = suma + numeroEstablecimientosEntero;
             } // fin de while
             entrada.close();
         } // fin de try

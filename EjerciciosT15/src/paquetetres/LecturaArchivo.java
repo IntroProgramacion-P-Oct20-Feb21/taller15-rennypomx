@@ -40,10 +40,13 @@ public class LecturaArchivo {
                 numeroEstablecimientosEntero = Integer.parseInt(numeroEstablecimientos);
                 
                 // agregar código aquí
-                
-                cadenaFinal = String.format("Cantón %s (%d)\n", 
-                        nombreCanton,
-                        numeroEstablecimientosEntero);
+                if (numeroEstablecimientosEntero <= 25) {
+                    cadenaFinal = String.format("%sCantón %s (%d)\n",
+                            cadenaFinal,
+                            nombreCanton,
+                            numeroEstablecimientosEntero);
+                }
+                    
                 
             } // fin de while
             entrada.close();

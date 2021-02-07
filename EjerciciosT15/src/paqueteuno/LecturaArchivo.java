@@ -20,18 +20,19 @@ public class LecturaArchivo {
     // lee registro del archivo
     public static void leerRegistros() {
 
-        // 1. Se abre el archivo
+      // 1. Se abre el archivo
         try // lee registros del archivo, usando el objeto Scanner
         {
             Scanner entrada = new Scanner(new File("data/datos1.csv"));
 
             while (entrada.hasNext()) {
-                String linea = entrada.nextLine();
-                List<String> lista = Arrays.asList(linea.split(","));
-                ArrayList<String> linea_partes = new ArrayList<>(lista);
+                String linea = entrada.nextLine();  // ["ARENILLAS, 62"]
+                List<String> lista = Arrays.asList(linea.split(","));  // ["ARENILLAS", "62"]
+                ArrayList<String> linea_partes = new ArrayList<>(lista);  // ["ARENILLAS", "62"]
                 for (int i = 0; i < linea_partes.size(); i++) {
                     System.out.println(linea_partes.get(i));
                 }
+                // System.out.printf("%s\n", linea_partes.get(1));
                 System.out.println("-----------------------------------");
 
             } // fin de while
